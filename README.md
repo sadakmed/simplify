@@ -1,8 +1,12 @@
+<p align="center">
+    <br>
+    <img src="docs/source/images/simplify-logos_white.png" width="400"/>
+    <br>
+<p>
+
 # Simplify
 
 Everything you need for text simplification, reconstruct phrasal texture, rephrase and increase readability.
-
-
 
 ## Simplifiers 
 
