@@ -10,7 +10,7 @@ from multiprocessing import Pool
 import json
 
 __all__ = ["Discourse"]
-jarpath = ".discourse.jar"
+jarpath = "https://github.com/sadakmed/simplify/raw/master/.jar/discourse.jar"
 
 
 def with_jvm(paths):

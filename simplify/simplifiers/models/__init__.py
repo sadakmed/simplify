@@ -1,2 +1,5 @@
 from .muss import Muss
-from .discoure import Discourse
+from .discourse import Discourse
+
+
+__all_ = ['Discourse', 'Muss']
