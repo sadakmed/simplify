@@ -11,10 +11,10 @@ These are techniques for simplifiying sentences:
 1. muss
 2. discourse
 3. openie6
-4. (BiSECT)[https://github.com/mounicam/BiSECT]
-5. (Lexical simplification)[https://github.com/mounicam/lexical_simplification]
-6. (Controllable Simplification)[https://github.com/mounicam/controllable_simplification]
-7. (Neural Text Simplification)[https://github.com/senisioi/NeuralTextSimplification]
+4. [BiSECT](https://github.com/mounicam/BiSECT) (to integrate)
+5. [Lexical simplification](https://github.com/mounicam/lexical_simplification) (to integrate)  
+6. [Controllable Simplification](https://github.com/mounicam/controllable_simplification) (to integrate)
+7. [Neural Text Simplification](https://github.com/senisioi/NeuralTextSimplification) (to integrate)
 
 
 ## Evaluators
