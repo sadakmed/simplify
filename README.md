@@ -1,6 +1,6 @@
 # Simplify
 
-all you need for text simplification, disjoint sentences, and extract triplets.
+Everything you need for text simplification, reconstruct phrasal texture, rephrase and increase readability.
 
 
 
@@ -9,18 +9,12 @@ all you need for text simplification, disjoint sentences, and extract triplets.
 
 These are techniques for simplifiying sentences, 
 
-### Techniques:
-1. muss 
+1. muss
+2. discourse
+3. openie6
 
-## datasets
 
-Datasets for text simplification and disjoint conjuction.
-1. [dress data](https://github.com/louismartin/dress-data)
 ## Evaluators
 
 metrics to measure the performance of sentence simplifications
-**SARI**
-
-## Losses (optional)
-
-loss function for training(in case it was implemented)
+1. **SARI**
