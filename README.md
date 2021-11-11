@@ -4,10 +4,9 @@ Everything you need for text simplification, reconstruct phrasal texture, rephra
 
 
 
+## Simplifiers 
 
-## simplifiers 
-
-These are techniques for simplifiying sentences, 
+These are techniques for simplifiying sentences:
 
 1. muss
 2. discourse
@@ -16,5 +15,6 @@ These are techniques for simplifiying sentences,
 
 ## Evaluators
 
-metrics to measure the performance of sentence simplifications
-1. **SARI**
+metrics to measure the performance of sentence simplifications:
+1. Sari
+2. Bleu
