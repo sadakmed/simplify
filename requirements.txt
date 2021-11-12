@@ -2,5 +2,3 @@ fairseq
 jpype1
 sacrebleu
 imohash
-muss
-discourse
