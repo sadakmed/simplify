@@ -8,8 +8,6 @@ from setuptools import find_packages
 from simplify import SIMPLIFY_CACHE
 
 
-packages = ["simplify." + p for p in find_packages("simplify")]
-print(packages)
 
 shutil.copy(Path(".jar/discourse.jar"), SIMPLIFY_CACHE)
 
