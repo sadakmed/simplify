@@ -4,34 +4,33 @@
 # This source code is licensed under the license found in the
 # LICENSE file in the root directory of this source tree.
 
-from abc import ABC
-from functools import wraps, lru_cache
 import hashlib
-from pathlib import Path
+import re
 
 # import dill as pickle
 import shutil
-
-import re
+from abc import ABC
+from functools import lru_cache, wraps
+from pathlib import Path
 
 import numpy as np
-
 from fairseq.data.encoders.gpt2_bpe_utils import get_encoder
-
-from .utils import (
-    write_lines_in_parallel,
-    yield_lines_in_parallel,
-    add_dicts,
-    get_default_args,
-    get_temp_filepath,
-    failsafe_division,
-    download,
-    download_and_extract,
-    yield_lines,
-)
 
 from simplify import SIMPLIFY_CACHE
 from simplify.evaluators import lev_ratio
+
+from .utils import (
+    add_dicts,
+    download,
+    download_and_extract,
+    failsafe_division,
+    get_default_args,
+    get_temp_filepath,
+    write_lines_in_parallel,
+    yield_lines,
+    yield_lines_in_parallel,
+)
+
 
 FATTEXT_EMBEDDINGS_DIR = SIMPLIFY_CACHE / "fasttext-vectors/"
 SPECIAL_TOKEN_REGEX = r"<[a-zA-Z\-_\d\.]+>"

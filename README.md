@@ -1,6 +1,6 @@
 <p align="center">
     <br>
-    <img src="docs/source/images/simplify-logos_transparent.png" width="400"/>
+    <img src="docs/source/images/simplify_logo.png" width="400"/>
     <br>
 <p>
 

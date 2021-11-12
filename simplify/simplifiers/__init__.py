@@ -1,3 +1,4 @@
-from .models import Muss, Discourse
+from .models import Discourse, Muss
 
-__all__ = ['Discourse', 'Muss']
+
+__all__ = ["Discourse", "Muss"]

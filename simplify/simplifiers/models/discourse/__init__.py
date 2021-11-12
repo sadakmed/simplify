@@ -6,11 +6,14 @@ Permissions of this strong copyleft license are conditioned on making available 
 """
 
 
-from multiprocessing import Pool
 import json
+from multiprocessing import Pool
+
+from simplify import SIMPLIFY_CACHE
+
 
 __all__ = ["Discourse"]
-jarpath = "https://github.com/sadakmed/simplify/raw/master/.jar/discourse.jar"
+jarpath = SIMPLIFY_CACHE / "discourse.jar"
 
 
 def with_jvm(paths):
@@ -22,11 +25,8 @@ def with_jvm(paths):
             import jpype.imports
 
             jpype.startJVM("-ea", classpath=paths)
+            from org.lambda3.text.simplification.discourse.processing import DiscourseSimplifier, ProcessingType
             from org.slf4j.Logger import ROOT_LOGGER_NAME
-            from org.lambda3.text.simplification.discourse.processing import (
-                DiscourseSimplifier,
-                ProcessingType,
-            )
 
             logging = jpype.java.util.logging
             off = logging.Level.OFF
@@ -73,11 +73,8 @@ def discourse_old(sentences: list, paths: list):
         jp.java.util.logging.Level.OFF
     )
 
-    from org.lambda3.text.simplification.discourse.processing import (
-        DiscourseSimplifier,
-        ProcessingType,
-    )
     from org.lambda3.text.simplification.discourse.model import SimplificationContent
+    from org.lambda3.text.simplification.discourse.processing import DiscourseSimplifier, ProcessingType
 
     jlist_sentences = jpype.java.util.ArrayList(sentences)
     dis = DiscourseSimplifier()

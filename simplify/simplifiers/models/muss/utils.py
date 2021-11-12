@@ -4,24 +4,22 @@
 # This source code is licensed under the license found in the
 # LICENSE file in the root directory of this source tree.
 
-from contextlib import contextmanager
+import bz2
 import gzip
 import inspect
+import os
+import shutil
+import sys
+import tarfile
+import tempfile
+import time
+import zipfile
+from contextlib import contextmanager
 from io import StringIO
 from itertools import zip_longest
 from pathlib import Path
-import shutil
-import sys
-import tempfile
-import time
 from types import MethodType
-
-
-import bz2
-import os
-import tarfile
 from urllib.request import urlretrieve
-import zipfile
 
 from tqdm import tqdm
 
