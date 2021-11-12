@@ -10,7 +10,6 @@ Everything you need for text simplification, reconstruct phrasal texture, rephra
 
 
 
-## Simplifiers 
 
 These are techniques for simplifiying sentences:
 
