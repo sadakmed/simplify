@@ -1,5 +1,5 @@
-import sacrebleu
 import numpy as np
+import sacrebleu
 
 
 class BLEU:

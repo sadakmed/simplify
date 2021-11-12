@@ -1,6 +1,8 @@
-from .evaluators import *
-from pathlib import Path
 import os
+from pathlib import Path
+
+from .evaluators import *
+
 
 HOME = Path(os.environ["HOME"])
 SIMPLIFY_CACHE = HOME / ".cache/simplify"

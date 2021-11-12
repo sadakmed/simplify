@@ -4,26 +4,15 @@
 # This source code is licensed under the license found in the
 # LICENSE file in the root directory of this source tree.
 
+import re
+import shlex
+import shutil
 from collections import defaultdict
 from pathlib import Path
 
-import re
-import shutil
-import shlex
-
-
 from fairseq_cli import generate
 
-
-from .utils import (
-    log_std_streams,
-    yield_lines,
-    write_lines,
-    mock_cli_args,
-    create_temp_dir,
-    mute,
-    args_dict_to_str,
-)
+from .utils import args_dict_to_str, create_temp_dir, log_std_streams, mock_cli_args, mute, write_lines, yield_lines
 
 
 def remove_multiple_whitespaces(text):

@@ -4,9 +4,9 @@
 # This source code is licensed under the license found in the
 # LICENSE file in the root directory of this source tree.
 
+import shutil
 from functools import wraps
 from pathlib import Path
-import shutil
 
 from imohash import hashfile
 

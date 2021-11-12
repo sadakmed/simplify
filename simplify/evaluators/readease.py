@@ -1,5 +1,7 @@
-import textstat as ts
 import numpy as np
+
+import textstat as ts
+
 
 FRE_INDEX = {
     range(0, 10): "Extremely difficult",

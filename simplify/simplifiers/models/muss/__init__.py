@@ -6,10 +6,12 @@
 
 import shutil
 
-from .preprocessors import get_preprocessors
-from .utils import write_lines, read_lines, get_temp_filepath, download_and_extract
-from .simplifiers import get_fairseq_simplifier, get_preprocessed_simplifier
 from simplify import SIMPLIFY_CACHE
+
+from .preprocessors import get_preprocessors
+from .simplifiers import get_fairseq_simplifier, get_preprocessed_simplifier
+from .utils import download_and_extract, get_temp_filepath, read_lines, write_lines
+
 
 __all__ = ["Muss"]
 
