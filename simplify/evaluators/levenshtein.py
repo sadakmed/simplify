@@ -1,6 +1,5 @@
 import numpy as np
 
-
 RATIO = 2
 DISTANCE = 1
 

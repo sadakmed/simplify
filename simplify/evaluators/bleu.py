@@ -2,7 +2,7 @@ import numpy as np
 import sacrebleu
 
 
-class BLEU:
+class Bleu:
     def __init__(
         self, smooth_method="exp", smooth_value=None, lowercase=False, tokenizer="13a"
     ):
@@ -11,7 +11,7 @@ class BLEU:
         self.lowercase = lowercase
         self.tokenizer = tokenizer
 
-    def compute(self, system_sentence, refs):
+    def compute(self, hypothesis_sentence, refs):
         return sacrebleu.sentence_bleu(
             hypothesis_sentence,
             refs,
@@ -21,7 +21,7 @@ class BLEU:
             self.tokenizer,
         )
 
-    def compute_batch(self, hypothesis_sentences: List[str], refs: List[List[str]]):
+    def compute_batch(self, hypothesis_sentences, refs):
         assert len(hypothesis_sentences) == len(
             refs
         ), "number of hypothesis sentences should match the reference sentences"

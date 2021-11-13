@@ -7,8 +7,6 @@ from pathlib import Path
 from setuptools import find_packages
 from simplify import SIMPLIFY_CACHE
 
-
-
 shutil.copy(Path(".jar/discourse.jar"), SIMPLIFY_CACHE)
 
 setup(

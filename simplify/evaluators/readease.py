@@ -2,7 +2,6 @@ import numpy as np
 
 import textstat as ts
 
-
 FRE_INDEX = {
     range(0, 10): "Extremely difficult",
     range(10, 30): "Very difficult",
@@ -28,6 +27,8 @@ GF_INDEX = {
 }.update({i: f"{i}th grade" for i in range(2, 9)})
 
 # Flesch reading-ease
+
+
 def flesch_reading_ease(sentence):
     """In the Flesch reading-ease test, higher scores indicate material that is easier to read; lower numbers mark passages that are more difficult to read."""
     fr = ts.flesch_reading_ease(sentence)
@@ -58,7 +59,7 @@ def automated_readability_index(sentence):
 # reading time
 def reading_time(sentence):
     """returns the time (in seconds) needed for reading the text"""
-    return ts.reading_time(text)
+    return ts.reading_time(sentence)
 
 
 # syllable count
