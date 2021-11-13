@@ -30,7 +30,8 @@ GF_INDEX = {
 
 
 def flesch_reading_ease(sentence):
-    """In the Flesch reading-ease test, higher scores indicate material that is easier to read; lower numbers mark passages that are more difficult to read."""
+    """In the Flesch reading-ease test, higher scores indicate material that is easier to read;
+    lower numbers mark passages that are more difficult to read."""
     fr = ts.flesch_reading_ease(sentence)
     return fr, FRE_INDEX[int(fr)]
 
