@@ -1,4 +1,6 @@
 fairseq
+imohash
 jpype1
 sacrebleu
 imohash
+textstat
