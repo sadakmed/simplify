@@ -13,13 +13,13 @@ Everything you need for text simplification, reconstruct phrasal texture, rephra
 
 These are techniques for simplifiying sentences:
 
-1. [Muss](https://github.com/facebookresearch/muss/tree/main/muss)
-2. [Discourse](https://github.com/Lambda-3/DiscourseSimplification)
-3. [OpenIE6](https://github.com/dair-iitd/openie6)
-4. [BiSECT](https://github.com/mounicam/BiSECT) (to integrate)
-5. [Lexical simplification](https://github.com/mounicam/lexical_simplification) (to integrate)  
-6. [Controllable Simplification](https://github.com/mounicam/controllable_simplification) (to integrate)
-7. [Neural Text Simplification](https://github.com/senisioi/NeuralTextSimplification) (to integrate)
+1. [Discourse](https://github.com/Lambda-3/DiscourseSimplification)
+2. [OpenIE6](https://github.com/dair-iitd/openie6)
+3. [BiSECT](https://github.com/mounicam/BiSECT) (to integrate)
+4. [Lexical simplification](https://github.com/mounicam/lexical_simplification) (to integrate)
+5. [Controllable Simplification](https://github.com/mounicam/controllable_simplification) (to integrate)
+6. [Neural Text Simplification](https://github.com/senisioi/NeuralTextSimplification) (to integrate)
+
 
 
 ## Evaluators
