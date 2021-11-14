@@ -2,7 +2,6 @@ from collections import Counter
 
 import numpy as np
 
-
 NGRAM = 4
 
 

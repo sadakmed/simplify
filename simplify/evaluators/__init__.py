@@ -12,8 +12,8 @@ def compression_ratio(hypothesis, reference):
 
 
 def addition_ratio(hypothesis, reference):
-    ...
+    pass
 
 
 def deletion_ratio(hypothesis, reference):
-    ...
+    pass
