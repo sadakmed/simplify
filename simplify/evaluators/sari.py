@@ -115,9 +115,6 @@ def main():
         "95 species are now accepted .",
     ]
 
-    print(SARIsent(ssent, csent1, rsents))
-    print(SARIsent(ssent, csent2, rsents))
-    print(SARIsent(ssent, csent3, rsents))
 
 
 if __name__ == "__main__":

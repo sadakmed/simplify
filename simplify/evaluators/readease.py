@@ -1,5 +1,3 @@
-import numpy as np
-
 import textstat as ts
 
 FRE_INDEX = {
