@@ -29,13 +29,20 @@ Metrics to measure the performance of sentence simplifications:
 1. Sari
 2. Bleu
 
-## install
+## Install
 
-```
+```shell
 git clone https://github.com/sadakmed/simplify.git
 cd simplify/
 pip install -r requirements.txt
 pip install -e .
+```
+## Use
+    
+```python
+from simplify.simplifiers import Discourse
+discoure = Discourse()
+simple_output = discourse(complex_sentence_list)
 ```
     
 # Citations
