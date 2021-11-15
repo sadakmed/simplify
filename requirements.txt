@@ -1,4 +1,3 @@
-fairseq
 jpype1
 sacrebleu
 imohash
