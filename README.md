@@ -29,6 +29,15 @@ Metrics to measure the performance of sentence simplifications:
 1. Sari
 2. Bleu
 
+## install
+
+```
+git clone https://github.com/sadakmed/simplify.git
+cd simplify/
+pip install -r requirements.txt
+pip install -e .
+```
+    
 # Citations
 ```
 @inproceedings{kolluru&al20,
@@ -44,10 +53,5 @@ Metrics to measure the performance of sentence simplifications:
     address = {Seattle, U.S.A}
 }
 
-@article{martin2021muss,
-  title={MUSS: Multilingual Unsupervised Sentence Simplification by Mining Paraphrases},
-  author={Martin, Louis and Fan, Angela and de la Clergerie, {\'E}ric and Bordes, Antoine and Sagot, Beno{\^\i}t},
-  journal={arXiv preprint arXiv:2005.00352},
-  year={2021}
-}
+
 ```
