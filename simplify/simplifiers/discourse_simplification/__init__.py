@@ -6,10 +6,7 @@ Permissions of this strong copyleft license are conditioned on making available 
 """
 
 
-
-
+from ._discourse_simplification_data import DiscourseSimplificationData
 from ._discourse_simplification_model import DiscourseSimplification
-from ._discourse_simplification_data import  DiscourseSimplificationData
 
 __all__ = ["DiscourseSimplification", "DiscourseSimplificationData"]
-

@@ -106,9 +106,11 @@ def sari(original_sentence: str, system_sentence: str, refs: list):
 
 def main():
     original_sent = "About 95 species are currently accepted ."
-    system_sents = ["About 95 you now get in .", 
-                    "About 95 species are now agreed .",
-                    "About 95 species are currently agreed ."]
+    system_sents = [
+        "About 95 you now get in .",
+        "About 95 species are now agreed .",
+        "About 95 species are currently agreed .",
+    ]
     rsents = [
         "About 95 species are currently known .",
         "About 95 species are now accepted .",
@@ -116,9 +118,9 @@ def main():
     ]
 
     scores = [sari(original_sent, system_sent, rsents) for system_sent in system_sents]
-    
+
     print(scores)
-    
+
 
 if __name__ == "__main__":
     main()

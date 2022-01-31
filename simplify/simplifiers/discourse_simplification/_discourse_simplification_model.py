@@ -1,7 +1,7 @@
-from ..base import _BaseModel
-from multiprocessing import Pool
 import json
+from multiprocessing import Pool
 
+from ..base import _BaseModel
 
 __all__ = ["DiscourseSimplification"]
 
@@ -18,11 +18,11 @@ def with_jvm(paths):
             import jpype.imports
 
             jpype.startJVM("-ea", classpath=paths)
-            from org.slf4j.Logger import ROOT_LOGGER_NAME
             from org.lambda3.text.simplification.discourse.processing import (
                 DiscourseSimplifier,
                 ProcessingType,
             )
+            from org.slf4j.Logger import ROOT_LOGGER_NAME
 
             logging = jpype.java.util.logging
             off = logging.Level.OFF
@@ -65,8 +65,3 @@ class DiscourseSimplification(_BaseModel):
         with Pool(1) as p:
             outputs = p.map(discourse_simplify, [input_sentences])
         return outputs
-
-
-
-
-

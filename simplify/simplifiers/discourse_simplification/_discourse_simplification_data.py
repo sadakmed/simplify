@@ -1,6 +1,6 @@
-from simplify.simplifiers.base import _BaseData
 import logging
 
+from simplify.simplifiers.base import _BaseData
 
 __all__ = ["DiscourseSimplificationData"]
 

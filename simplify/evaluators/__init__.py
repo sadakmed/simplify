@@ -1,7 +1,7 @@
 from .levenshtein import lev_ratio
 from .sari import sari
 
-__all__ = ['sari', 'lev_ratio', 'compression_ratio']
+__all__ = ["sari", "lev_ratio", "compression_ratio"]
 
 
 def compression_ratio(hypothesis, reference):

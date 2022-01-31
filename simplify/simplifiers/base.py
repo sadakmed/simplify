@@ -1,12 +1,9 @@
 from abc import ABCMeta, abstractmethod
 
 
-
 class _BaseData(metaclass=ABCMeta):
-
-
     @abstractmethod
-    def encode(self,sentence):
+    def encode(self, sentence):
         ...
 
     @abstractmethod
@@ -21,15 +18,12 @@ class _BaseData(metaclass=ABCMeta):
 
 
 class _BaseModel(metaclass=ABCMeta):
-
     @abstractmethod
-    def simplify(self,*args, **kwargs):
+    def simplify(self, *args, **kwargs):
         ...
 
-    def __call__(self,*args, **kwargs):
+    def __call__(self, *args, **kwargs):
         return self.simplify(*args, **kwargs)
 
-    def forward(self,*args, **kwargs):
+    def forward(self, *args, **kwargs):
         return self.simplify(*args, **kwargs)
-
-
