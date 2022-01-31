@@ -6,11 +6,13 @@ Permissions of this strong copyleft license are conditioned on making available 
 """
 
 
-from multiprocessing import Pool
 import json
+from multiprocessing import Pool
+
+from simplify import SIMPLIFY_CACHE
 
 __all__ = ["Discourse"]
-jarpath = "https://github.com/sadakmed/simplify/raw/master/.jar/discourse.jar"
+jarpath = SIMPLIFY_CACHE / "discourse.jar"
 
 
 def with_jvm(paths):
@@ -22,11 +24,11 @@ def with_jvm(paths):
             import jpype.imports
 
             jpype.startJVM("-ea", classpath=paths)
-            from org.slf4j.Logger import ROOT_LOGGER_NAME
             from org.lambda3.text.simplification.discourse.processing import (
                 DiscourseSimplifier,
                 ProcessingType,
             )
+            from org.slf4j.Logger import ROOT_LOGGER_NAME
 
             logging = jpype.java.util.logging
             off = logging.Level.OFF
@@ -59,36 +61,6 @@ def discourse(sentences: list):
     p_simple_sentences = str(j_simple_sentences.serializeToJSON().toString())
     simple_sentences = json.loads(p_simple_sentences)
     return simple_sentences
-
-
-def discourse_old(sentences: list, paths: list):
-    import jpype as jp
-    import jpype.imports
-
-    jp.startJVM("-ea", classpath=paths)
-    from org.slf4j.Logger import ROOT_LOGGER_NAME
-
-    print(ROOT_LOGGER_NAME)
-    jp.java.util.logging.Logger.getLogger(ROOT_LOGGER_NAME).setLevel(
-        jp.java.util.logging.Level.OFF
-    )
-
-    from org.lambda3.text.simplification.discourse.processing import (
-        DiscourseSimplifier,
-        ProcessingType,
-    )
-    from org.lambda3.text.simplification.discourse.model import SimplificationContent
-
-    jlist_sentences = jpype.java.util.ArrayList(sentences)
-    dis = DiscourseSimplifier()
-    j_simple_content = dis.doDiscourseSimplification(
-        jlist_sentences, ProcessingType.SEPARATE
-    )
-    p_simple_content = str(j_simple_content.serializeToJSON().toString())
-    jp.shutdownJVM()
-
-    out_dict = json.loads(p_simple_content)
-    return out_dict
 
 
 class Discourse:
