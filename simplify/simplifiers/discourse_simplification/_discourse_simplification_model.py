@@ -1,18 +1,12 @@
-"""
-Lambda-3/DiscourseSimplification is licensed under the
-
-GNU General Public License v3.0
-Permissions of this strong copyleft license are conditioned on making available complete source code of licensed works and modifications, which include larger works using a licensed work, under the same license. Copyright and license notices must be preserved. Contributors provide an express grant of patent rights.
-"""
-
-
 import json
 from multiprocessing import Pool
 
-from simplify import SIMPLIFY_CACHE
+from ..base import _BaseModel
 
-__all__ = ["Discourse"]
-jarpath = SIMPLIFY_CACHE / "discourse.jar"
+__all__ = ["DiscourseSimplification"]
+
+
+jarpath = "https://github.com/sadakmed/simplify/raw/master/.jar/discourse.jar"
 
 
 def with_jvm(paths):
@@ -52,7 +46,7 @@ def with_jvm(paths):
 
 
 @with_jvm(jarpath)
-def discourse(sentences: list):
+def discourse_simplify(sentences: list):
     jlist_sentences = jpype.java.util.ArrayList(sentences)
     dis = DiscourseSimplifier()
     j_simple_sentences = dis.doDiscourseSimplification(
@@ -63,12 +57,11 @@ def discourse(sentences: list):
     return simple_sentences
 
 
-class Discourse:
+class DiscourseSimplification(_BaseModel):
     def __init__(self):
         pass
 
-    def __call__(self, sentences):
+    def simplify(self, input_sentences):
         with Pool(1) as p:
-            # output = p.map(partial(discourse, paths=jarpath), [sentences])
-            output = p.map(discourse, [sentences])
-        return output
+            outputs = p.map(discourse_simplify, [input_sentences])
+        return outputs
