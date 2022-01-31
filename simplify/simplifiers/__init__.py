@@ -1,3 +1,1 @@
-from .models import Discourse
-
-__all__ = ["Discourse"]
+from .discourse_simplification import *
