@@ -41,12 +41,23 @@ pip install  .
 
 ```python
 from simplify.simplifiers import DiscourseSimplification
-discousre = DiscourseSimplification()
+discourse = DiscourseSimplification()
 simple_output = discourse(complex_sentence_list)
 ```
 
 # Citations
 ```
+@InProceedings{cetto2018graphene,
+	  author    = {Matthias Cetto and Christina Niklaus and Andr\'{e} Freitas and Siegfried Handschuh},
+	  title     = {Graphene: Semantically-Linked Propositions in Open Information Extraction},
+	  booktitle = {Proceedings of the 27th International Conference on Computational Linguistics},
+	  year      = {2018},
+	  publisher = {Association for Computational Linguistics},
+  	  pages     = {2300--2311},
+	  location  = {Santa Fe, New Mexico, USA},
+ 	  url 	    = {http://aclweb.org/anthology/C18-1195}
+	} 
+
 @inproceedings{kolluru&al20,
     title = "{O}pen{IE}6: {I}terative {G}rid {L}abeling and {C}oordination {A}nalysis for {O}pen {I}nformation {E}xtraction",\
     author = "Kolluru, Keshav  and
