@@ -1,8 +1,7 @@
 import os
 
-HOME = os.environ["HOME"]
-SIMPLIFY_CACHE = os.path.join(HOME, ".cache/simplify")
 
 
+SIMPLIFY_CACHE = os.path.expanduser(os.path.join("~/.cache", "simplify"))
 if not os.path.exists(SIMPLIFY_CACHE):
     os.mkdir(SIMPLIFY_CACHE)
