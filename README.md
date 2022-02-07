@@ -35,16 +35,16 @@ Metrics to measure the performance of sentence simplifications:
 git clone https://github.com/sadakmed/simplify.git
 cd simplify/
 pip install -r requirements.txt
-pip install -e .
+pip install  .
 ```
 ## Use
-    
+
 ```python
-from simplify.simplifiers import Discourse
-discoure = Discourse()
+from simplify.simplifiers import DiscourseSimplification
+discousre = DiscourseSimplification()
 simple_output = discourse(complex_sentence_list)
 ```
-    
+
 # Citations
 ```
 @inproceedings{kolluru&al20,
@@ -59,6 +59,5 @@ simple_output = discourse(complex_sentence_list)
     year = "2020",
     address = {Seattle, U.S.A}
 }
-
 
 ```
