@@ -22,11 +22,17 @@ jobs:
           isort  .
           black  .
           
+      - name: Check for modified files
+        id: git-check
+        run: echo ::set-output name=modified::$(if git diff-index --quiet HEAD --; then echo "false"; else echo "true"; fi)
+
       - name: Push changes
+        if: steps.git-check.outputs.modified == 'true'
         run: |
-          if ! git diff-index --quiet HEAD --; then 
             git config --global user.name 'sadakmed' 
             git config --global user.email 'sada_med@protonmail.com' 
             git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
-            git commit -am "code formatting" || git push
-          fi
+            git commit -am "code formatting" || true
+            git push
+          
+          
