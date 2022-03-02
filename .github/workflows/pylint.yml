@@ -1,23 +1,32 @@
-name: Pylint
+name: code formatting
 
-on: [push]
+on: pull_request  
 
 jobs:
-  build:
+  formatting:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        python-version: ["3.6", "3.7", "3.8", "3.9", "3.10"]
     steps:
-    - uses: actions/checkout@v2
-    - name: Set up Python ${{ matrix.python-version }}
-      uses: actions/setup-python@v2
-      with:
-        python-version: ${{ matrix.python-version }}
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install pylint
-    - name: Analysing the code with pylint
-      run: |
-        pylint `ls -R|grep .py$|xargs`
+      - uses: actions/checkout@v2
+        with:
+            ref: ${{ github.event.pull_request.head.ref }}
+      - name: Setup Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
+      - name: Install isort and black
+        run: |
+          python -m pip install --upgrade pip
+          pip install isort black
+      - name: Run isort and black
+        run: |
+          isort  .
+          black  .
+          
+      - name: Push changes
+        run: |
+          if ! git diff-index --quiet HEAD --; then 
+            git config --global user.name 'sadakmed' 
+            git config --global user.email 'sada_med@protonmail.com' 
+            git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
+            git commit -am "code formatting" || git push
+          fi
