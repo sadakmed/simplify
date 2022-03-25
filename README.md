@@ -4,7 +4,7 @@
     <br>
 <p>
 
-# Simplify
+# Simplify (In Maintenance)
 
 Everything you need for text simplification, reconstruct phrasal texture, rephrase and increase readability.
 
@@ -13,12 +13,12 @@ Everything you need for text simplification, reconstruct phrasal texture, rephra
 
 These are techniques for simplifiying sentences:
 
-1. [Discourse](https://github.com/Lambda-3/DiscourseSimplification)
-2. [OpenIE6](https://github.com/dair-iitd/openie6)
-3. [BiSECT](https://github.com/mounicam/BiSECT) (to integrate)
-4. [Lexical simplification](https://github.com/mounicam/lexical_simplification) (to integrate)
-5. [Controllable Simplification](https://github.com/mounicam/controllable_simplification) (to integrate)
-6. [Neural Text Simplification](https://github.com/senisioi/NeuralTextSimplification) (to integrate)
+- [X] [Discourse](https://github.com/Lambda-3/DiscourseSimplification)
+- [X] [OpenIE6](https://github.com/dair-iitd/openie6)
+- [ ] [BiSECT](https://github.com/mounicam/BiSECT) 
+- [ ] [Lexical simplification](https://github.com/mounicam/lexical_simplification) 
+- [ ] [Controllable Simplification](https://github.com/mounicam/controllable_simplification)
+- [ ] [Neural Text Simplification](https://github.com/senisioi/NeuralTextSimplification) 
 
 
 
